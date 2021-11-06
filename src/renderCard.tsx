@@ -281,6 +281,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                                 border-radius: 0 0 8px 8px;
                             ">
                                 <div style="
+                                    position: relative;
                                     margin: 0 15px;
                                     width: auto;
                                     height: auto;
@@ -315,11 +316,10 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                                         `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity.assets.small_image}.webp`
                                     )}"
                                     style="
-                                        width: 30px;
-                                        height: 30px;
+                                        position: absolute;
+                                        bottom: 0; right: -7.5px;
+                                        width: 30px; height: 30px;
                                         border-radius: 50%;
-                                        margin-left: -26px;
-                                        margin-bottom: -8px;
                                     "/>`
                                         : ``
                                 }
@@ -353,7 +353,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                                             white-space: nowrap;
                                             font-size: 0.85rem;
                                             text-overflow: ellipsis;
-                                            height: 15px;
+                                            max-width: 141px; height: 15px;
                                             margin: 7px 0;
                                         ">${activity.details}</p>`
                                             : ``
@@ -367,7 +367,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                                             white-space: nowrap;
                                             font-size: 0.85rem;
                                             text-overflow: ellipsis;
-                                            height: 15px;
+                                            max-width: 141px; height: 15px;
                                             margin: 7px 0;
                                         ">${activity.state}${
                                                   activity.party && activity.party.size
