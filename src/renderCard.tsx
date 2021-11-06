@@ -401,23 +401,29 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                 !activity &&
                 body.data.activities[Object.keys(body.data.activities).length - 1].type === 2
                     ? `
-                <div style="
-                    display: flex;
-                    flex-direction: row;
-                    height: 120px;
-                    margin-left: 15px;
-                    font-size: 0.8rem;
-                    padding-top: 18px;
-                ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="268" height="21" viewBox="0 0 268 21" fill="none" style="
+                        overflow: visible;
+                        margin-left: 16px;
+                    ">
+                    <path d="M0 21V7.19143C0 7.19143 35.3844 -2.31216 79.4578 0.530784C126.044 1.7492 142.689 13.564 202.466 14.5019C242.561 14.5019 268 7.35388 268 7.35388V21H0Z" fill="#1DB954"/>
+                </svg>
+                    <div style="
+                        display: flex;
+                        flex-direction: row;
+                        font-size: 0.75rem;
+                        padding: 15px 0; margin: 0 16px 16px;
+                        background-color: #1DB954;
+                        border-radius: 0 0 8px 8px;
+                    ">
                     <img src="${await (async () => {
                         const album = await encodeBase64(body.data.spotify.album_art_url);
-                        if (album) return `data:image/png;base64,${album}" style="border: solid 0.5px #222;`;
+                        if (album) return `data:image/png;base64,${album}" style="border: solid 0 transparent;`;
                         return 'https://lanyard-profile-readme.vercel.app/assets/unknown.png" style="filter: invert(100);';
                     })()}
                         width: 80px;
                         height: 80px;
                         border-radius: 10px;
-                        margin-right: 15px;
+                        margin: 0 15px;
                     "/>
 
                     <div style="
@@ -427,10 +433,10 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                         width: 279px;
                     ">
                         <p style="font-size: 0.75rem; font-weight: bold; color: ${
-                            theme === "dark" ? "#1CB853" : "#0d943d"
+                            theme === "dark" ? "#fff" : "#0d943d"
                         }; margin-bottom: 15px;">LISTENING TO SPOTIFY...</p>
                         <p style="
-                            height: 15px;
+                            max-width: 141px; height: 15px;
                             color: ${theme === "dark" ? "#fff" : "#000"};
                             font-weight: bold;
                             font-size: 0.85rem;
