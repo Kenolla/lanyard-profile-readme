@@ -133,12 +133,12 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
     activity = Array.isArray(activities) ? activities[0] : activities;
 
     return `
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="410px" height="218px">
-                <foreignObject x="0" y="0" width="410" height="218">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="310px" height="244px">
+                <foreignObject x="0" y="0" width="100%" height="100%">
                     <div xmlns="http://www.w3.org/1999/xhtml" style="
                         position: absolute;
-                        width: 400px;
-                        height: 200px;
+                        width: calc(100% - 10px);
+                        height: calc(100% - 10px);
                         inset: 0;
                         background-color: #${backgroundColor};
                         color: ${theme === "dark" ? "#fff" : "#000"};
@@ -150,15 +150,12 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                         border-radius: ${borderRadius};
                     ">
                         <div style="
-                            width: 200px;
+                            width: 100%;
                             height: 100px;
                             inset: 0;
                             display: flex;
                             flex-direction: row;
                             padding-bottom: 5px;
-                            border-bottom: solid 0.5px ${
-                                theme === "dark" ? "hsl(0, 0%, 100%, 10%)" : "hsl(0, 0%, 0%, 10%)"
-                            };
                         ">
                             <div style="
                                 display: flex;
@@ -168,8 +165,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                             ">
                                 <img src="data:image/png;base64,${avatar}"
                                 style="
-                                    border: solid 3px ${avatarBorderColor};
-                                    border-radius: 50%;
+                                    border-radius: 8px;
                                     width: 50px;
                                     height: 50px;
                                     position: relative;
@@ -177,6 +173,13 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                                     left: 50%;
                                     transform: translate(-50%, -50%);
                                 "/>
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                style="
+                                    overflow: visible;
+                                    z-index: 1;
+                                ">
+                                    <rect fill="${avatarBorderColor}" x="3" y="53" width="16" height="16" rx="4" ry="4" stroke="#${backgroundColor}" style="stroke-width: 3px;"/>
+                                </svg>
                             </div>
                             <div style="
                                 height: 80px;
@@ -184,11 +187,11 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                             ">
                                 <div style="
                                     display: flex;
-                                    flex-direction: row;
+                                    flex-direction: column;
                                     position: relative;
                                     top: ${userStatus.length > 0 && hideStatus !== "true" ? "35%" : "50%"};
-                                    transform: translate(0, -50%);
-                                    height: 25px;
+                                    transform: translate(0, -80%);
+                                    height: 35px;
                                 ">
                                     <h1 style="
                                         font-size: 1.15rem;
@@ -263,16 +266,22 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                         ${
                             activity
                                 ? `
+                            <svg xmlns="http://www.w3.org/2000/svg" width="268" height="21" viewBox="0 0 268 21" fill="none" style="
+                                    overflow: visible;
+                                    margin-left: 16px;
+                                ">
+                                <path d="M0 21V7.19143C0 7.19143 35.3844 -2.31216 79.4578 0.530784C126.044 1.7492 142.689 13.564 202.466 14.5019C242.561 14.5019 268 7.35388 268 7.35388V21H0Z" fill="#7289DA"/>
+                            </svg>
                             <div style="
                                 display: flex;
                                 flex-direction: row;
-                                height: 120px;
-                                margin-left: 15px;
                                 font-size: 0.75rem;
-                                padding-top: 18px;
+                                padding: 15px 0; margin: 0 16px 16px;
+                                background-color: #7289da;
+                                border-radius: 0 0 8px 8px;
                             ">
                                 <div style="
-                                    margin-right: 15px;
+                                    margin: 0 15px;
                                     width: auto;
                                     height: auto;
                                 ">
@@ -285,7 +294,6 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                                     style="
                                         width: 80px;
                                         height: 80px;
-                                        border: solid 0.5px #222;
                                         border-radius: 10px;
                                     "/>
                                     `
