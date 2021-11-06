@@ -133,7 +133,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
     activity = Array.isArray(activities) ? activities[0] : activities;
 
     return `
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="310px" height="244px">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="310px" height="260px">
                 <foreignObject x="0" y="0" width="100%" height="100%">
                     <div xmlns="http://www.w3.org/1999/xhtml" style="
                         position: absolute;
@@ -268,7 +268,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                                 ? `
                             <svg xmlns="http://www.w3.org/2000/svg" width="268" height="21" viewBox="0 0 268 21" fill="none" style="
                                     overflow: visible;
-                                    margin-left: 16px;
+                                    margin: 16px 0 0 16px;
                                 ">
                                 <path d="M0 21V7.19143C0 7.19143 35.3844 -2.31216 79.4578 0.530784C126.044 1.7492 142.689 13.564 202.466 14.5019C242.561 14.5019 268 7.35388 268 7.35388V21H0Z" fill="#7289DA"/>
                             </svg>
@@ -403,7 +403,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                     ? `
                 <svg xmlns="http://www.w3.org/2000/svg" width="268" height="21" viewBox="0 0 268 21" fill="none" style="
                         overflow: visible;
-                        margin-left: 16px;
+                        margin: 16px 0 0 16px;
                     ">
                     <path d="M0 21V7.19143C0 7.19143 35.3844 -2.31216 79.4578 0.530784C126.044 1.7492 142.689 13.564 202.466 14.5019C242.561 14.5019 268 7.35388 268 7.35388V21H0Z" fill="#1DB954"/>
                 </svg>
