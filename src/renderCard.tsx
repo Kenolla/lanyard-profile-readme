@@ -150,7 +150,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                         border-radius: ${borderRadius};
                     ">
                         <div style="
-                            width: 400px;
+                            width: 200px;
                             height: 100px;
                             inset: 0;
                             display: flex;
