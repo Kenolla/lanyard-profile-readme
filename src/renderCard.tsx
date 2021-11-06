@@ -133,12 +133,12 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
     activity = Array.isArray(activities) ? activities[0] : activities;
 
     return `
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="310px" height="260px">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="310px" height="228px">
                 <foreignObject x="0" y="0" width="100%" height="100%">
                     <div xmlns="http://www.w3.org/1999/xhtml" style="
                         position: absolute;
-                        width: calc(100% - 10px);
-                        height: calc(100% - 10px);
+                        width: 100%;
+                        height: 100%;
                         inset: 0;
                         background-color: #${backgroundColor};
                         color: ${theme === "dark" ? "#fff" : "#000"};
@@ -146,7 +146,6 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                         font-size: 16px;
                         display: flex;
                         flex-direction: column;
-                        padding: 5px;
                         border-radius: ${borderRadius};
                     ">
                         <div style="
@@ -266,17 +265,16 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                         ${
                             activity
                                 ? `
-                            <svg xmlns="http://www.w3.org/2000/svg" width="268" height="21" viewBox="0 0 268 21" fill="none" style="
+                            <svg xmlns="http://www.w3.org/2000/svg" width="310" height="21" viewBox="0 0 310 21" fill="none" style="
                                     overflow: visible;
-                                    margin: 16px 0 0 16px;
                                 ">
-                                <path d="M0 21V7.19143C0 7.19143 35.3844 -2.31216 79.4578 0.530784C126.044 1.7492 142.689 13.564 202.466 14.5019C242.561 14.5019 268 7.35388 268 7.35388V21H0Z" fill="#7289DA"/>
+                                <path d="M0 21V7.19143C0 7.19143 40.9297 -2.31216 91.9101 0.530784C145.797 1.7492 165.051 13.564 234.196 14.5019C280.574 14.5019 310 7.35388 310 7.35388V21H0Z" fill="#7289DA"/>
                             </svg>
                             <div style="
                                 display: flex;
                                 flex-direction: row;
                                 font-size: 0.75rem;
-                                padding: 15px 0; margin: 0 16px 16px;
+                                padding: 15px 0;
                                 background-color: #7289da;
                                 border-radius: 0 0 8px 8px;
                             ">
@@ -401,17 +399,16 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                 !activity &&
                 body.data.activities[Object.keys(body.data.activities).length - 1].type === 2
                     ? `
-                <svg xmlns="http://www.w3.org/2000/svg" width="268" height="21" viewBox="0 0 268 21" fill="none" style="
+                <svg xmlns="http://www.w3.org/2000/svg" width="310" height="21" viewBox="0 0 310 21" fill="none" style="
                         overflow: visible;
-                        margin: 16px 0 0 16px;
                     ">
-                    <path d="M0 21V7.19143C0 7.19143 35.3844 -2.31216 79.4578 0.530784C126.044 1.7492 142.689 13.564 202.466 14.5019C242.561 14.5019 268 7.35388 268 7.35388V21H0Z" fill="#1DB954"/>
+                    <path d="M0 21V7.19143C0 7.19143 40.9297 -2.31216 91.9101 0.530784C145.797 1.7492 165.051 13.564 234.196 14.5019C280.574 14.5019 310 7.35388 310 7.35388V21H0Z" fill="#1DB954"/>
                 </svg>
                     <div style="
                         display: flex;
                         flex-direction: row;
                         font-size: 0.75rem;
-                        padding: 15px 0; margin: 0 16px 16px;
+                        padding: 15px 0;
                         background-color: #1DB954;
                         border-radius: 0 0 8px 8px;
                     ">
