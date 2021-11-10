@@ -269,7 +269,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                             <svg xmlns="http://www.w3.org/2000/svg" width="360" height="21" viewBox="0 0 360 21" fill="none" style="
                                     overflow: visible;
                                 ">
-                                <path d="M0 21V7.19143C0 7.19143 38.8172 -2.31216 87.1664 0.530784C138.272 1.7492 156.532 13.564 222.108 14.5019C266.093 14.5019 294 7.35388 294 7.35388V21H0Z" fill="#7289DA"/>
+                                <path d="M0 21V7.19143C0 7.19143 38.8172 -2.31216 87.1664 0.530784C138.272 1.7492 156.532 13.564 222.108 14.5019C266.093 14.5019 344 7.35388 344 7.35388V21H0Z" fill="#7289DA"/>
                             </svg>
                             <div style="
                                 display: flex;
@@ -403,7 +403,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="21" viewBox="0 0 360 21" fill="none" style="
                         overflow: visible;
                     ">
-                    <path d="M0 21V7.19143C0 7.19143 38.8172 -2.31216 87.1664 0.530784C138.272 1.7492 156.532 13.564 222.108 14.5019C266.093 14.5019 294 7.35388 294 7.35388V21H0Z" fill="#1DB954"/>
+                    <path d="M0 21V7.19143C0 7.19143 38.8172 -2.31216 87.1664 0.530784C138.272 1.7492 156.532 13.564 222.108 14.5019C266.093 14.5019 344 7.35388 344 7.35388V21H0Z" fill="#1DB954"/>
                 </svg>
                     <div style="
                         display: flex;
