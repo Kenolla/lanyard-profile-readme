@@ -199,7 +199,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                                     ">
                                     ${escape(body.data.discord_user.username)}${
         discrim !== "hide"
-            ? `<span style="color: ${theme === "dark" ? "#ccc" : "#666"}; font-weight: lighter;">#${
+            ? `<span style="color: ${theme === "dark" ? "#B6B6B6" : "#373737"}; font-weight: lighter;">#${
                   body.data.discord_user.discriminator
               }</span>`
             : ""
@@ -347,7 +347,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                                         activity.details
                                             ? `
                                         <p style="
-                                            color: ${theme === "dark" ? "#ccc" : "#777"};
+                                            color: ${theme === "dark" ? "#DBDBDB" : "#373737"};
                                             overflow: hidden;
                                             white-space: nowrap;
                                             font-size: 0.85rem;
@@ -361,7 +361,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                                         activity.state
                                             ? `
                                         <p style="
-                                            color: ${theme === "dark" ? "#ccc" : "#777"};
+                                            color: ${theme === "dark" ? "#DBDBDB" : "#373737"};
                                             overflow: hidden;
                                             white-space: nowrap;
                                             font-size: 0.85rem;
@@ -379,7 +379,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                                         activity.timestamps && activity.timestamps.start && hideTimestamp !== "true"
                                             ? `
                                         <p style="
-                                            color: ${theme === "dark" ? "#ccc" : "#777"};
+                                            color: ${theme === "dark" ? "#DBDBDB" : "#373737"};
                                             overflow: hidden;
                                             white-space: nowrap;
                                             font-size: 0.85rem;
@@ -450,7 +450,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                             white-space: nowrap;
                             font-size: 0.85rem;
                             text-overflow: ellipsis;
-                            color: ${theme === "dark" ? "#ccc" : "#777"};
+                            color: ${theme === "dark" ? "#DBDBDB" : "#373737"};
                         ">By ${escape(body.data.spotify.artist)}</p>
                     </div>
                 </div>
