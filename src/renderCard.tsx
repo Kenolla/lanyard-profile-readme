@@ -173,7 +173,7 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                                     left: 50%;
                                     transform: translate(-50%, -50%);
                                 "/>
-                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                <svg xmlns="http://www.w3.org/2000/svg"
                                 style="
                                     overflow: visible;
                                     z-index: 1;
@@ -187,11 +187,11 @@ const renderCard = async (body: LanyardTypes.Root, params: Parameters): Promise<
                             ">
                                 <div style="
                                     display: flex;
-                                    flex-direction: column;
+                                    flex-direction: row;
                                     position: relative;
                                     top: ${userStatus.length > 0 && hideStatus !== "true" ? "35%" : "50%"};
-                                    transform: translate(0, -80%);
-                                    height: 35px;
+                                    transform: translate(0, -50%);
+                                    height: 25px;
                                 ">
                                     <h1 style="
                                         font-size: 1.15rem;
